@@ -22,12 +22,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean'
+                bat 'mvn clean'
             }
         }
         stage('Unit Testing') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         stage('Code Quality') {
@@ -37,7 +37,7 @@ pipeline {
         }
         stage('Package') {
             steps {
-                sh 'mvn package'
+                bat 'mvn package'
                 archiveArtifacts artifacts: 'target/*.war'
             }
         }
