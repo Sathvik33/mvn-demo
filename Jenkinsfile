@@ -26,7 +26,7 @@ pipeline {
             }
         }
         stage('Unit Testing') {
-            steps {
+            steps { 
                 bat 'mvn test'
             }
         }
