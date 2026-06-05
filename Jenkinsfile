@@ -17,7 +17,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: "${params.BRANCH}",
-                url: 'https://github.com/user/repo.git'
+                url: 'https://github.com/Sathvik33/mvn-demo.git'
             }
         }
         stage('Build') {
